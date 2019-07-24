@@ -18,6 +18,7 @@ class App extends React.Component {
       randomCord: { lat: 44.0286, lng: -72.7317 }
     };
 
+    // binding the functions to the state
     this.moveMapNorth = this.moveMapNorth.bind(this);
     this.moveMapSouth = this.moveMapSouth.bind(this);
     this.moveMapEast = this.moveMapEast.bind(this);
@@ -32,6 +33,7 @@ class App extends React.Component {
     this.randomLong = this.randomLong.bind(this);
   }
 
+  // startGame function generates a random point within the declared boundaires 
   startGame() {
     this.setState({
       gameStarted: true
@@ -41,12 +43,15 @@ class App extends React.Component {
     }
   }
 
+  // formula for generating the random coordinates 
   randomCord() {
     this.setState({
       gameStarted: true
     });
     let randomLat = this.randomLat();
+    console.log(randomLat)
     let randomLong = this.randomLong();
+    console.log(randomLong)
     let layerLength = leafletPip.pointInLayer(
       [randomLong, randomLat],
       this.state.borderData
@@ -58,11 +63,15 @@ class App extends React.Component {
         [randomLong, randomLat],
         this.state.borderData
       ).length;
+      this.setState({
+        currentPoint: {lat:randomLat, lng:randomLong}
+      })
     }
 
     this.map.panTo([randomLat, randomLong]);
   }
 
+  // does not function at this time. TODO: activating removes gameStarted state
   quitGame() {
     this.setState({ gameStarted: this });
     if (this.state.gameStarted) {
