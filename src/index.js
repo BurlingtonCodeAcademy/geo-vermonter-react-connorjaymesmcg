@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MapSection from "./map";
+import './style.css';
 
 ReactDOM.render(
-  <h1>Hello World!</h1>,
+  <MapSection> </MapSection>,
   document.getElementById('root')
 )
+

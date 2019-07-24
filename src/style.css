@@ -1,0 +1,30 @@
+#map {
+  display: block;
+  margin: auto;
+  width: 900px;
+  height: 700px;
+}
+
+.directionButtons {
+  width: 25vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+#score {
+  color: darkorchid;
+  text-align: center;
+  margin: auto;
+}
+
+.mainControls {
+  width: 25vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
