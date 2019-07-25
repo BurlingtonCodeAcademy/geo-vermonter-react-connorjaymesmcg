@@ -1,0 +1,19 @@
+#map {
+  display: block;
+  margin: auto;
+  width: 900px;
+  height: 700px;
+}
+
+.directionButtons {
+  margin: auto;
+  /* display: flex; */
+  align-content: center;
+  color: darkorchid
+}
+
+  #score {
+    color: darkorchid;
+    text-align: center;
+    margin: auto;
+  }
